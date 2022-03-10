@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+:root {
+  --color-primary: #457b9d;
+  --color-highlight: #e63946;
+  --color-highlight-dark: #c91926;
+  --color-text: #727272;
+  --color-error: #e63946;
+  --border-radius: 8px;
+  --spacing: 8px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: #f1faee;
+}
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color-primary);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  /* left: 16px; */
+  text-align: left;
+  margin-bottom: 0;
+}
+.subtitle {
+  font-size: 0.7rem;
+  margin-top: 0;
+  margin-bottom: calc(var(--spacing) * 2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
+  width: 33%;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* outline: 1px solid blue; */
+}
+
+input,
+select {
+  margin: var(--spacing) 0px 4px 0px;
+}
+
+select {
+  padding: 12px 16px;
+  border: 0;
+  border-right: 12px solid transparent;
+  border-radius: var(--border-radius);
+  outline: 1px solid;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  padding: 12px 16px;
+  border-radius: var(--border-radius);
+  border: 1px solid black;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+  outline: 1px solid var(--color-primary);
+}
+
+input[type="checkbox"] {
+  padding: 0;
+  margin-right: 6px;
+}
+
+label {
+  color: var(--color-text);
+}
+label.caption {
+  font-size: 0.7rem;
+}
+.error-message {
+  font-size: 0.7rem;
+  color: var(--color-error);
+  margin-bottom: var(--spacing);
+  /* min-height: 12px; */
+}
+
+button {
+  background-color: var(--color-highlight);
+  border-radius: var(--border-radius);
+  border: none;
   color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px;
+  margin: calc(var(--spacing) * 2) 0px;
 }
 
-.App-link {
-  color: #61dafb;
+button:active {
+  background-color: var(--color-highlight-dark);
+}
+button:disabled {
+  background-color: lightgray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-container {
+  position: relative;
+}
+.icon {
+  position: relative;
+  top: 10px;
+  font-size: 48px;
+  transform: rotate(330deg);
+  text-align: end;
 }
