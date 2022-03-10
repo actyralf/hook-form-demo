@@ -4,6 +4,7 @@
   --color-highlight-dark: #c91926;
   --color-text: #727272;
   --color-error: #e63946;
+  --color-background: white;
   --border-radius: 8px;
   --spacing: 8px;
 }
@@ -14,7 +15,7 @@
 }
 body {
   height: 100vh;
-  background-color: #f1faee;
+  background-color: var(--color-background);
 }
 .container {
   padding: 20px;

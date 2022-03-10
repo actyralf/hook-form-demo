@@ -132,7 +132,10 @@ function App() {
           Extra viel Sahne!
         </label>
 
-        <button disabled={!isDirty} type="submit">
+        <button
+          disabled={!isDirty || Object.keys(errors).length !== 0}
+          type="submit"
+        >
           Gib mir mein Eis!
         </button>
       </form>
